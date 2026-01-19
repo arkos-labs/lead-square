@@ -57,9 +57,9 @@ const Hero = () => {
 
           {/* H1 - Pain-focused headline with Elegant Serif Style - Optimized for Mobile */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight animate-fade-in-up tracking-tight" style={{ animationDelay: '0.1s' }}>
-            <span className="text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Relamping LED Industriel</span>
+            <span className="text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Expert en Relamping LED</span>
             <br />
-            <span className="text-blue-400 italic font-light drop-shadow-lg mix-blend-screen block mt-2">& Économies d'Énergie Directes</span>
+            <span className="text-blue-400 italic font-light drop-shadow-lg mix-blend-screen block mt-2">et Éclairage de Parkings</span>
           </h1>
 
           {/* Subheadline - Readable on mobile */}

@@ -67,7 +67,7 @@ const Benefits = () => {
 
         <div className="text-center mb-8 md:mb-16">
           <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
-            Relamping LED Industriel : Pourquoi les leaders choisissent <span className="gradient-text">Square</span>
+            Solutions d'éclairage LED haute performance pour l'industrie et la logistique
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Maximisez vos économies d'énergie avec Square, l'expert en <strong>remplacement de lampes LED</strong> qui transforme votre environnement de travail. <a href="#audit-form" onClick={(e) => { e.preventDefault(); document.getElementById('audit-form')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-primary hover:underline font-semibold">Commencez par un audit gratuit de votre installation</a>.

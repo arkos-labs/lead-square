@@ -31,7 +31,7 @@ const Process = () => {
             <div className="container px-4 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
                     <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
-                        Un processus <span className="gradient-text">simple et maîtrisé</span>
+                        Bureau d'étude et étude photométrique : Votre projet clé en main
                     </h2>
                     <p className="text-lg text-muted-foreground">
                         Nous avons simplifié la transition énergétique de votre <strong>éclairage industriel</strong> pour qu'elle soit transparente et sans effort pour vous.

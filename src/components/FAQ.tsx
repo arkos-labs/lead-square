@@ -45,10 +45,10 @@ const FAQ = () => {
             <div className="container px-4 max-w-3xl mx-auto">
                 <div className="text-center mb-8 md:mb-12">
                     <h2 className="font-display text-2xl md:text-4xl font-bold mb-4">
-                        FAQ sur le Relamping LED Industriel
+                        FAQ sur le Relamping LED
                     </h2>
                     <p className="text-muted-foreground">
-                        Tout savoir sur l'optimisation de votre éclairage LED industriel et vos économies d'énergie.
+                        Tout savoir sur l'optimisation de votre éclairage LED et vos économies d'énergie.
                     </p>
                 </div>
 
