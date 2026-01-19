@@ -84,7 +84,7 @@ const MultiStepForm = () => {
     const PUBLIC_KEY = "0-T-0-9LG_-Q2_SuC";
 
     const templateParams = {
-      to_email: 'pro.squaregroup@gmail.com',
+      to_email: 'contact@square-solutions.fr',
       from_name: `${formData.firstName} ${formData.lastName}`,
       from_email: formData.email,
       phone: formData.phone || 'Non renseigné',
@@ -131,7 +131,7 @@ const MultiStepForm = () => {
   return (
     <section className="py-20 lg:py-28 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Header */}
         <div className="text-center mb-14">
           <span className="inline-block text-primary font-semibold text-sm tracking-wide uppercase mb-3">
@@ -157,7 +157,7 @@ const MultiStepForm = () => {
               </span>
             </div>
             <div className="h-1.5 bg-slate-200 rounded-full overflow-hidden">
-              <div 
+              <div
                 className="h-full bg-primary rounded-full transition-all duration-500 ease-out"
                 style={{ width: `${(step / 5) * 100}%` }}
               />
@@ -167,7 +167,7 @@ const MultiStepForm = () => {
 
         {/* Form Container */}
         <div className="max-w-2xl mx-auto">
-          
+
           {/* Back Button */}
           {step > 1 && step < 6 && (
             <button
@@ -190,17 +190,15 @@ const MultiStepForm = () => {
                   <button
                     key={s.id}
                     onClick={() => handleSelect('sector', s.id)}
-                    className={`relative p-5 rounded-xl border-2 text-left transition-all duration-200 ${
-                      formData.sector === s.id
+                    className={`relative p-5 rounded-xl border-2 text-left transition-all duration-200 ${formData.sector === s.id
                         ? 'border-primary bg-primary/5'
                         : 'border-slate-200 hover:border-slate-300 bg-white'
-                    }`}
+                      }`}
                   >
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${
-                      formData.sector === s.id 
-                        ? 'bg-primary text-white' 
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${formData.sector === s.id
+                        ? 'bg-primary text-white'
                         : 'bg-slate-100 text-slate-500'
-                    }`}>
+                      }`}>
                       {s.icon}
                     </div>
                     <h4 className="font-semibold text-slate-800 mb-0.5">{s.label}</h4>
@@ -305,7 +303,7 @@ const MultiStepForm = () => {
               <h3 className="text-xl font-semibold text-slate-800 mb-6">
                 Vos coordonnées pour recevoir l'étude
               </h3>
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-1.5">Prénom</label>

@@ -37,7 +37,7 @@ const MentionsLegales = () => {
                                 <li><strong>Numéro SIREN :</strong> 884 694 333</li>
                                 <li><strong>Capital social :</strong> 100 000 €</li>
                                 <li><strong>Directeur de la publication :</strong> M. Cherki Nicolas</li>
-                                <li><strong>Contact :</strong> pro.squaregroup@gmail.com</li>
+                                <li><strong>Contact :</strong> contact@square-solutions.fr</li>
                             </ul>
                         </section>
 
@@ -69,7 +69,7 @@ const MentionsLegales = () => {
                                 Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant.
                             </p>
                             <p className="mt-2">
-                                Pour exercer ce droit, vous pouvez nous contacter à l'adresse suivante : <strong>contact@square.fr</strong>
+                                Pour exercer ce droit, vous pouvez nous contacter à l'adresse suivante : <strong>contact@square-solutions.fr</strong>
                             </p>
                             <p className="mt-2">
                                 Les informations recueillies via les formulaires de ce site sont destinées exclusivement à l'usage de la société SQUARE pour la gestion de la relation client et ne sont en aucun cas communiquées à des tiers.

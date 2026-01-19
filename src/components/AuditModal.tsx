@@ -113,7 +113,7 @@ const AuditModal = ({ children }: { children?: React.ReactNode }) => {
         const PUBLIC_KEY = "0-T-0-9LG_-Q2_SuC";
 
         const templateParams = {
-            to_email: 'pro.squaregroup@gmail.com', // Votre email de réception
+            to_email: 'contact@square-solutions.fr', // Votre email de réception
             from_name: `${formData.firstName} ${formData.lastName}`,
             from_email: formData.email,
             phone: formData.phone || 'Non renseigné',

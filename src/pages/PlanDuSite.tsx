@@ -106,7 +106,7 @@ const PlanDuSite = () => {
                                 <span className="font-semibold text-foreground">📞 Contact</span>
                                 <ul className="ml-6 mt-2 space-y-2 text-base text-muted-foreground border-l-2 border-border pl-4">
                                     <li>Téléphone : <a href="tel:+33635880886" className="hover:text-primary transition-colors">+33 6 35 88 08 86</a></li>
-                                    <li>Email : <a href="mailto:cherkinicolas@gmail.com" className="hover:text-primary transition-colors">cherkinicolas@gmail.com</a></li>
+                                    <li>Email : <a href="mailto:contact@square-solutions.fr" className="hover:text-primary transition-colors">contact@square-solutions.fr</a></li>
                                     <li>Adresse : 128 Rue de la Boétie, 75008 Paris, France</li>
                                 </ul>
                             </li>

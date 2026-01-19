@@ -57,7 +57,7 @@ const PolitiqueConfidentialite = () => {
                         <section className="bg-card p-6 rounded-lg border border-border/50 shadow-sm">
                             <h2 className="text-xl font-display font-semibold text-foreground mb-4">3. Responsable du traitement</h2>
                             <p>
-                                Le responsable du traitement des données à caractère personnel est la société SQUARE. Vous pouvez nous contacter à l'adresse suivante : <strong>pro.squaregroup@gmail.com</strong>.
+                                Le responsable du traitement des données à caractère personnel est la société SQUARE. Vous pouvez nous contacter à l'adresse suivante : <strong>contact@square-solutions.fr</strong>.
                             </p>
                         </section>
 
@@ -81,7 +81,7 @@ const PolitiqueConfidentialite = () => {
                                 <li>Droit à la portabilité de vos données.</li>
                             </ul>
                             <p className="mt-2">
-                                Pour exercer ces droits, veuillez nous contacter par email à pro.squaregroup@gmail.com.
+                                Pour exercer ces droits, veuillez nous contacter par email à contact@square-solutions.fr.
                             </p>
                         </section>
 
