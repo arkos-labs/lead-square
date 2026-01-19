@@ -127,8 +127,8 @@ const Maintenance = () => {
                             </p>
                             <ul className="space-y-4 my-8">
                                 <li><strong>Règlement RoHS & Éco-conception :</strong> Depuis 2023, la vente des tubes fluorescents (T5, T8) est interdite dans l'UE. Les pièces de rechange deviennent rares et chères.</li>
-                                <li><strong>Certificats d'Économies d'Énergie (CEE) :</strong> Des fiches comme la <strong>IND-BA-116</strong> permettent de financer massivement le passage à la LED.</li>
-                                <li><strong>Décret Tertiaire :</strong> L'objectif de -40% d'ici 2030 rend la LED incontournable pour les bâtiments industriels.</li>
+                                <li><strong>Certificats d'Économies d'Énergie (CEE) :</strong> Des fiches comme la <strong>IND-BA-116</strong> (voir sur <a href="https://www.legifrance.gouv.fr/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Legifrance</a>) permettent de financer massivement le passage à la LED.</li>
+                                <li><strong>Décret Tertiaire :</strong> L'objectif de -40% d'ici 2030 rend la LED incontournable pour les bâtiments industriels. (<a href="https://www.ademe.fr/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Source ADEME</a>)</li>
                             </ul>
 
                             {/* REUSABLE STRATEGIC BLOCK */}

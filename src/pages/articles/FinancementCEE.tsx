@@ -114,6 +114,9 @@ const FinancementCEE = () => {
                                     <span><strong>La gestion d'éclairage :</strong> En 2026, les primes sont fortement bonifiées si vous installez un système de détection de présence ou de gradation selon la lumière du jour.</span>
                                 </li>
                             </ul>
+                            <p className="text-sm text-slate-500 italic mt-4">
+                                Retrouvez les textes de loi officiels concernant les CEE sur le portail <a href="https://www.legifrance.gouv.fr/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Legifrance</a> ou sur le site du <a href="https://www.ecologie.gouv.fr/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ministère de la Transition Écologique</a>.
+                            </p>
 
                             <h2 className="text-3xl mt-12 mb-6">Un financement qui va au-delà des CEE</h2>
                             <p>

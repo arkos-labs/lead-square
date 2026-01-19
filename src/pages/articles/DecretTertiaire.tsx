@@ -108,6 +108,9 @@ const DecretTertiaire = () => {
                             <p>
                                 En 2026, les entreprises doivent déjà avoir déclaré leurs consommations de référence sur la plateforme <strong>OPERAT</strong>. Si vos chiffres ne montrent pas une tendance à la baisse, vous vous exposez à des sanctions financières et à une dégradation de votre image de marque (le "Name & Shame").
                             </p>
+                            <p className="text-sm text-slate-500 italic mt-4">
+                                Sources et références : Consultez le site officiel de l'<a href="https://www.ademe.fr/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">ADEME</a> ainsi que celui du <a href="https://www.ecologie.gouv.fr/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Ministère de la Transition Écologique</a>.
+                            </p>
 
                             <h2 className="text-3xl mt-12 mb-6">Pourquoi l'éclairage LED est votre meilleur allié ?</h2>
                             <p>
