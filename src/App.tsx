@@ -15,6 +15,7 @@ import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import Facebook from "./pages/Facebook";
 import CGV from "./pages/CGV";
 import PlanDuSite from "./pages/PlanDuSite";
+import MarketingTools from "./pages/MarketingTools";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/facebook" element={<Facebook />} />
           <Route path="/cgv" element={<CGV />} />
           <Route path="/plan-du-site" element={<PlanDuSite />} />
+          <Route path="/admin/marketing" element={<MarketingTools />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

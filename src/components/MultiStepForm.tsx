@@ -23,6 +23,7 @@ import {
   Check,
   MapPin
 } from 'lucide-react';
+import { EMAIL_CONFIG } from '@/config/email';
 
 const MultiStepForm = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -79,12 +80,8 @@ const MultiStepForm = () => {
   const handleBack = () => setStep(step - 1);
 
   const sendLeadEmail = async () => {
-    const SERVICE_ID = "service_kfa7m5l";
-    const TEMPLATE_ID = "template_mvrjb45";
-    const PUBLIC_KEY = "0-T-0-9LG_-Q2_SuC";
-
     const templateParams = {
-      to_email: 'contact@square-solutions.fr',
+      to_email: EMAIL_CONFIG.TO_EMAIL,
       from_name: `${formData.firstName} ${formData.lastName}`,
       from_email: formData.email,
       phone: formData.phone || 'Non renseigné',
@@ -98,7 +95,7 @@ const MultiStepForm = () => {
     };
 
     try {
-      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      await emailjs.send(EMAIL_CONFIG.SERVICE_ID, EMAIL_CONFIG.TEMPLATE_ID, templateParams, EMAIL_CONFIG.PUBLIC_KEY);
     } catch (error) {
       console.error("Erreur lors de l'envoi de l'email :", error);
     }
@@ -191,13 +188,13 @@ const MultiStepForm = () => {
                     key={s.id}
                     onClick={() => handleSelect('sector', s.id)}
                     className={`relative p-5 rounded-xl border-2 text-left transition-all duration-200 ${formData.sector === s.id
-                        ? 'border-primary bg-primary/5'
-                        : 'border-slate-200 hover:border-slate-300 bg-white'
+                      ? 'border-primary bg-primary/5'
+                      : 'border-slate-200 hover:border-slate-300 bg-white'
                       }`}
                   >
                     <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${formData.sector === s.id
-                        ? 'bg-primary text-white'
-                        : 'bg-slate-100 text-slate-500'
+                      ? 'bg-primary text-white'
+                      : 'bg-slate-100 text-slate-500'
                       }`}>
                       {s.icon}
                     </div>

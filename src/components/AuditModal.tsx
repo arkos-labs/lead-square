@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import * as VisuallyHidden from "@radix-ui/react-visually-hidden";
+import { EMAIL_CONFIG } from '@/config/email';
 
 /**
  * LumePro - Audit Énergétique LED Interactif
@@ -108,15 +109,12 @@ const AuditModal = ({ children }: { children?: React.ReactNode }) => {
     const handleBack = () => setStep(step - 1);
 
     const sendLeadEmail = async () => {
-        const SERVICE_ID = "service_kfa7m5l";
-        const TEMPLATE_ID = "template_mvrjb45";
-        const PUBLIC_KEY = "0-T-0-9LG_-Q2_SuC";
-
         const templateParams = {
-            to_email: 'contact@square-solutions.fr', // Votre email de réception
+            to_email: EMAIL_CONFIG.TO_EMAIL, // Votre email de réception
             from_name: `${formData.firstName} ${formData.lastName}`,
             from_email: formData.email,
             phone: formData.phone || 'Non renseigné',
+            address: 'Non renseigné',
             company: formData.company,
             sector: sectors.find(s => s.id === formData.sector)?.label,
             surface: formData.surface,
@@ -126,7 +124,7 @@ const AuditModal = ({ children }: { children?: React.ReactNode }) => {
         };
 
         try {
-            await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+            await emailjs.send(EMAIL_CONFIG.SERVICE_ID, EMAIL_CONFIG.TEMPLATE_ID, templateParams, EMAIL_CONFIG.PUBLIC_KEY);
             console.log("Email de lead envoyé avec succès !");
         } catch (error) {
             console.error("Erreur lors de l'envoi de l'email :", error);

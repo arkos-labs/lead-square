@@ -1,0 +1,7 @@
+
+export const EMAIL_CONFIG = {
+    SERVICE_ID: "service_kfa7m5l",
+    TEMPLATE_ID: "template_mvrjb45",
+    PUBLIC_KEY: "0-T-0-9LG_-Q2_SuC",
+    TO_EMAIL: "contact@square-solutions.fr",
+};
