@@ -88,6 +88,7 @@ const Footer = () => {
             <p>© 2026 Square Lighting</p>
             <div className="flex gap-4">
               <Link to="/mentions-legales" className="hover:text-white transition-colors">Légal</Link>
+              <Link to="/politique-confidentialite" className="hover:text-white transition-colors">Confidentialité</Link>
               <Link to="/plan-du-site" className="hover:text-white transition-colors">Sitemap</Link>
             </div>
           </div>
