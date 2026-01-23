@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
+import emailjs from '@emailjs/browser';
+import { EMAIL_CONFIG } from "@/config/email";
 
 const Footer = lazy(() => import("@/components/Footer"));
 import {
@@ -34,12 +36,27 @@ const LandingPage = () => {
         setIsSubmitting(true);
 
         try {
-            // Simulation d'envoi - À remplacer par votre logique d'envoi réelle
-            await new Promise(resolve => setTimeout(resolve, 1500));
+            const templateParams = {
+                to_email: EMAIL_CONFIG.TO_EMAIL,
+                from_name: `${formData.prenom} ${formData.nom}`,
+                from_email: formData.email,
+                phone_number: formData.telephone,
+                company_name: formData.entreprise,
+                surface: formData.surface || "Non renseignée",
+                message: formData.message,
+                type_demande: "Audit Gratuit (Facebook Ads)"
+            };
+
+            await emailjs.send(
+                EMAIL_CONFIG.SERVICE_ID,
+                EMAIL_CONFIG.TEMPLATE_ID,
+                templateParams,
+                EMAIL_CONFIG.PUBLIC_KEY
+            );
 
             toast({
                 title: "✅ Demande envoyée avec succès !",
-                description: "Nous vous contacterons dans les plus brefs délais.",
+                description: "Nous avons bien reçu votre demande d'audit.",
             });
 
             // Réinitialiser le formulaire
@@ -53,9 +70,10 @@ const LandingPage = () => {
                 message: ""
             });
         } catch (error) {
+            console.error("Erreur envoi email:", error);
             toast({
                 title: "❌ Erreur",
-                description: "Une erreur est survenue. Veuillez réessayer.",
+                description: "Une erreur est survenue lors de l'envoi. Veuillez nous contacter par téléphone.",
                 variant: "destructive"
             });
         } finally {
