@@ -39,27 +39,50 @@ const LandingPage = () => {
             console.log("🚀 Envoi email à:", EMAIL_CONFIG.TO_EMAIL);
 
             const templateParams = {
-                // Variables standards qui marchent souvent mieux
+                // Destinataire
+                to_email: EMAIL_CONFIG.TO_EMAIL,
+
+                // Identité (Plusieurs variantes pour être sûr)
+                name: `${formData.prenom} ${formData.nom}`,
+                nom: `${formData.prenom} ${formData.nom}`,
                 user_name: `${formData.prenom} ${formData.nom}`,
-                user_email: formData.email,
-                message: `
-                    Nouveau lead depuis Landing Page Facebook:
-                    ----------------------------------------
-                    Nom: ${formData.prenom} ${formData.nom}
-                    Email: ${formData.email}
-                    Téléphone: ${formData.telephone}
-                    Entreprise: ${formData.entreprise}
-                    Surface: ${formData.surface || "Non renseignée"}
-                    
-                    Message client:
-                    ${formData.message}
-                `,
-                // Au cas où le template utilise les noms spécifiques
                 from_name: `${formData.prenom} ${formData.nom}`,
+
+                // Contact
+                email: formData.email,
+                user_email: formData.email,
                 from_email: formData.email,
+                reply_to: formData.email,
+
+                // Téléphone (Variantes)
+                telephone: formData.telephone,
+                phone: formData.telephone,
                 phone_number: formData.telephone,
+                tel: formData.telephone,
+
+                // Entreprise (Variantes)
+                entreprise: formData.entreprise,
+                societe: formData.entreprise,
+                company: formData.entreprise,
                 company_name: formData.entreprise,
-                reply_to: formData.email
+
+                // Projet (Variantes)
+                surface: formData.surface || "Non renseignée",
+                surface_projet: formData.surface || "Non renseignée",
+                area: formData.surface || "Non renseignée",
+
+                // Champs spécifiques qui semblent vides sur votre capture
+                secteur: "Industriel / Tertiaire",
+                eclairage_actuel: "Non spécifié (Formulaire rapide)",
+                priorite: "Normale",
+
+                // Message global au cas où
+                message: formData.message || "Pas de message supplémentaire",
+                message_client: formData.message || "Pas de message supplémentaire",
+
+                // Meta
+                date: new Date().toLocaleDateString('fr-FR'),
+                source: "Landing Page Facebook"
             };
 
             const response = await emailjs.send(
