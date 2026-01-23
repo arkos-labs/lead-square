@@ -61,7 +61,7 @@ const LandingPage = () => {
 
             const response = await emailjs.send(
                 EMAIL_CONFIG.SERVICE_ID,
-                EMAIL_CONFIG.TEMPLATE_ID,
+                EMAIL_CONFIG.LANDING_TEMPLATE_ID, // Utilise l'ID spécifique Landing Page
                 templateParams,
                 EMAIL_CONFIG.PUBLIC_KEY
             );
