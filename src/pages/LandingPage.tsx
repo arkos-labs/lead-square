@@ -38,51 +38,25 @@ const LandingPage = () => {
         try {
             console.log("🚀 Envoi email à:", EMAIL_CONFIG.TO_EMAIL);
 
+            // Mapping exact selon MultiStepForm.tsx qui fonctionne
+            // Les variables doivent être EXACTEMENT celles-ci
             const templateParams = {
-                // Destinataire
                 to_email: EMAIL_CONFIG.TO_EMAIL,
-
-                // Identité (Plusieurs variantes pour être sûr)
-                name: `${formData.prenom} ${formData.nom}`,
-                nom: `${formData.prenom} ${formData.nom}`,
-                user_name: `${formData.prenom} ${formData.nom}`,
                 from_name: `${formData.prenom} ${formData.nom}`,
-
-                // Contact
-                email: formData.email,
-                user_email: formData.email,
                 from_email: formData.email,
-                reply_to: formData.email,
-
-                // Téléphone (Variantes)
-                telephone: formData.telephone,
                 phone: formData.telephone,
-                phone_number: formData.telephone,
-                tel: formData.telephone,
-
-                // Entreprise (Variantes)
-                entreprise: formData.entreprise,
-                societe: formData.entreprise,
                 company: formData.entreprise,
-                company_name: formData.entreprise,
 
-                // Projet (Variantes)
+                // Champs requis par le template (valeurs par défaut car landing page simplifiée)
+                address: "Non demandée (Landing Page)",
+                sector: "Non demandé (Landing Page)",
                 surface: formData.surface || "Non renseignée",
-                surface_projet: formData.surface || "Non renseignée",
-                area: formData.surface || "Non renseignée",
+                lighting: "Non demandé (Landing Page)",
+                priority: "Demande via Landing Page Facebook",
 
-                // Champs spécifiques qui semblent vides sur votre capture
-                secteur: "Industriel / Tertiaire",
-                eclairage_actuel: "Non spécifié (Formulaire rapide)",
-                priorite: "Normale",
-
-                // Message global au cas où
-                message: formData.message || "Pas de message supplémentaire",
-                message_client: formData.message || "Pas de message supplémentaire",
-
-                // Meta
-                date: new Date().toLocaleDateString('fr-FR'),
-                source: "Landing Page Facebook"
+                // Date et Message
+                date: new Date().toLocaleString('fr-FR'),
+                message: formData.message || "Aucun message supplémentaire"
             };
 
             const response = await emailjs.send(
