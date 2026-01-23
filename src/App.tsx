@@ -13,6 +13,7 @@ import Maintenance from "./pages/articles/Maintenance";
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 import Facebook from "./pages/Facebook";
+import LandingPage from "./pages/LandingPage";
 import CGV from "./pages/CGV";
 import PlanDuSite from "./pages/PlanDuSite";
 import MarketingTools from "./pages/MarketingTools";
@@ -44,6 +45,7 @@ const App = () => (
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="/facebook" element={<Facebook />} />
+          <Route path="/landing" element={<LandingPage />} />
           <Route path="/cgv" element={<CGV />} />
           <Route path="/plan-du-site" element={<PlanDuSite />} />
           <Route path="/admin/marketing" element={<MarketingTools />} />
