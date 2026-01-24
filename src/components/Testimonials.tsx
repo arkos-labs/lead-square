@@ -1,5 +1,5 @@
 import { Star, Quote } from "lucide-react";
-import warehouseImage from "@/assets/warehouse-testimonials.png";
+import warehouseImage from "@/assets/warehouse-lit.jpg";
 import { useEffect, useState, useRef } from "react";
 
 const CountUp = ({ end, duration = 2000, suffix = "", prefix = "", decimals = 0 }: { end: number, duration?: number, suffix?: string, prefix?: string, decimals?: number }) => {
