@@ -1,0 +1,26 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Content-Security-Policy", "value": "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=()" }
+      ]
+    }
+  ],
+  "routes": [
+    { "src": "/robots.txt", "dest": "/robots.txt" },
+    { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
+    { "src": "/sitemap_index.xml", "dest": "/sitemap_index.xml" },
+    { "src": "/sitemap-index.xml", "dest": "/sitemap-index.xml" },
+    { "src": "/sitemaps.xml", "dest": "/sitemaps.xml" },
+    { "src": "/sitemap1.xml", "dest": "/sitemap1.xml" },
+    { "src": "/post-sitemap.xml", "dest": "/post-sitemap.xml" },
+    { "src": "/page-sitemap.xml", "dest": "/page-sitemap.xml" },
+    { "src": "/news-sitemap.xml", "dest": "/news-sitemap.xml" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}

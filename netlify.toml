@@ -1,0 +1,53 @@
+[[redirects]]
+  from = "/sitemap.xml"
+  to = "/sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap_index.xml"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap-index.xml"
+  to = "/sitemap-index.xml"
+  status = 200
+
+[[redirects]]
+  from = "/sitemaps.xml"
+  to = "/sitemaps.xml"
+  status = 200
+
+[[redirects]]
+  from = "/sitemap1.xml"
+  to = "/sitemap1.xml"
+  status = 200
+
+[[redirects]]
+  from = "/post-sitemap.xml"
+  to = "/post-sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/page-sitemap.xml"
+  to = "/page-sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/news-sitemap.xml"
+  to = "/news-sitemap.xml"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; img-src 'self' data: https:; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; object-src 'none'"
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
