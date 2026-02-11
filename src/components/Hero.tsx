@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingDown } from "lucide-react";
 import heroImage1 from "@/assets/hero-slide-1.jpg";
@@ -14,6 +15,7 @@ import logoOrion from "@/assets/orion-logo.png";
 const heroImages = [heroImage1, heroImage3, heroImage5];
 
 const Hero = () => {
+  const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -57,14 +59,14 @@ const Hero = () => {
 
           {/* H1 - Pain-focused headline with Elegant Serif Style - Optimized for Mobile */}
           <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight animate-fade-in-up tracking-tight" style={{ animationDelay: '0.1s' }}>
-            <span className="text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">Expert en Relamping LED</span>
+            <span className="text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">{t('hero.title')}</span>
             <br />
-            <span className="text-blue-400 italic font-light drop-shadow-lg mix-blend-screen block mt-2">et Éclairage de Parkings</span>
+            <span className="text-blue-400 italic font-light drop-shadow-lg mix-blend-screen block mt-2">{t('hero.titleSuffix')}</span>
           </h1>
 
           {/* Subheadline - Readable on mobile */}
           <p className="text-base sm:text-lg md:text-xl text-white/95 max-w-2xl mx-auto mb-6 md:mb-8 animate-fade-in-up drop-shadow-md px-2" style={{ animationDelay: '0.2s' }}>
-            Transformez votre éclairage industriel : jusqu'à <span className="text-white font-semibold">60% d'économies directes</span>, 0€ d'investissement initial, rentabilité immédiate.
+            {t('hero.subtitle')}
           </p>
 
           <p className="hidden md:block text-white/90 mb-10 animate-fade-in-up font-medium drop-shadow-md" style={{ animationDelay: '0.3s' }}>
@@ -83,9 +85,9 @@ const Hero = () => {
               variant="default"
               size="lg"
               className="w-full sm:w-auto shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_40px_rgba(37,99,235,0.6)] transition-all bg-blue-600/90 hover:bg-blue-500 backdrop-blur-sm text-white font-bold tracking-wide text-lg py-6 md:py-8 px-8 md:px-10 border-none rounded-full md:rounded-md"
-              aria-label="Demander un audit offert"
+              aria-label={t('hero.cta')}
             >
-              Demander un audit offert
+              {t('hero.cta')}
               <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2 md:ml-3" aria-hidden="true" />
             </Button>
           </div>

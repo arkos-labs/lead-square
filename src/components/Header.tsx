@@ -1,10 +1,18 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X, Zap, Languages } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import squareLogo from "@/assets/square-logo-new.png";
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const location = useLocation();
@@ -63,32 +71,48 @@ const Header = () => {
               onClick={(e) => { e.preventDefault(); scrollToSection("benefits"); }}
               className="text-xs lg:text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors"
             >
-              Avantages
+              {t('nav.benefits')}
             </a>
             <a
               href="#simulator"
               onClick={(e) => { e.preventDefault(); scrollToSection("simulator"); }}
               className="text-xs lg:text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors"
             >
-              Simulateur
+              {t('nav.simulator')}
             </a>
             <Link
               to="/expertise"
               className="text-xs lg:text-sm font-medium text-gray-900 hover:text-blue-600 transition-colors"
             >
-              Actualités
+              {t('nav.news')}
             </Link>
           </nav>
 
           {/* Right Actions - Right aligned */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4 md:gap-6">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full">
+                  <Languages className="h-4 w-4" />
+                  <span className="sr-only">Toggle language</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => i18n.changeLanguage("fr")}>
+                  Français
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => i18n.changeLanguage("en")}>
+                  English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             {location.pathname !== "/landing" && (
               <a
                 href="#audit-form"
                 onClick={(e) => { e.preventDefault(); scrollToSection("audit-form"); }}
                 className="hidden md:inline-flex items-center justify-center rounded-lg bg-blue-600 text-white hover:bg-blue-700 border-none px-6 h-10 text-sm font-bold transition-all shadow-md hover:shadow-lg"
               >
-                Demander un audit gratuit
+                {t('nav.audit')}
               </a>
             )}
 
@@ -119,21 +143,21 @@ const Header = () => {
               className="text-xl font-medium text-gray-900 py-3 w-full text-left"
               onClick={(e) => { e.preventDefault(); scrollToSection("benefits"); }}
             >
-              Avantages
+              {t('nav.benefits')}
             </a>
             <a
               href="#simulator"
               className="text-xl font-medium text-gray-900 py-3 w-full text-left"
               onClick={(e) => { e.preventDefault(); scrollToSection("simulator"); }}
             >
-              Simulateur
+              {t('nav.simulator')}
             </a>
             <Link
               to="/expertise"
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-xl font-medium text-gray-900 py-3 w-full text-left"
             >
-              Actualités
+              {t('nav.news')}
             </Link>
 
             <div className="h-px w-full bg-gray-100 my-2" />
@@ -144,7 +168,7 @@ const Header = () => {
                 className="flex items-center justify-center w-full h-14 text-lg rounded-xl bg-blue-600 text-white font-bold"
                 onClick={(e) => { e.preventDefault(); scrollToSection("audit-form"); }}
               >
-                Demander un audit gratuit
+                {t('nav.audit')}
               </a>
             )}
           </nav>
