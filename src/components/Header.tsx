@@ -92,9 +92,9 @@ const Header = () => {
           <div className="flex items-center gap-4 md:gap-6">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="icon" className="h-9 w-9 rounded-full">
+                <Button variant="outline" size="icon" className="h-9 w-9 rounded-full border-gray-300 bg-white text-gray-700 hover:bg-gray-100">
                   <Languages className="h-4 w-4" />
-                  <span className="sr-only">Toggle language</span>
+                  <span className="sr-only">Changer de langue</span>
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
